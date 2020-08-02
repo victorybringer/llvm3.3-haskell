@@ -1,0 +1,3 @@
+fromList [ ("@p", fromList ["@a", "@b", "@c", "%arg.addr"])
+         , ("@q", fromList ["@a", "@b", "%arg.addr"])
+         ]
