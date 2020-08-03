@@ -2,7 +2,7 @@ From haskell:8.2.2
 
 COPY sources.list  /etc/apt/
 
-RUN sudo apt-get update && sudo apt-get install  -y aptitude && aptitude search llvm && sudo apt-get install -y llvm-3.3 &&  sudo apt-get install -y libgmp-dev &&  sudo apt-get install -y g++ && mkdir /root/haskell && mkdir /root/LLVM
+RUN  apt-get update &&  apt-get install  -y aptitude && aptitude search llvm &&  apt-get install -y llvm-3.3 &&   apt-get install -y libgmp-dev &&   apt-get install -y g++ && mkdir /root/haskell && mkdir /root/LLVM
 
 
 
