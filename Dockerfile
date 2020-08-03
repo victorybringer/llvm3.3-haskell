@@ -49,6 +49,9 @@ RUN cd /root/LLVM/llvm-slicing-0.3 && cabal install
 COPY testfile.c     /root/.cabal/bin
 
 
+COPY testfile.c     /root/LLVM/llvm-slicing-0.3
+
+
 WORKDIR  /root/.cabal/bin
 
 
