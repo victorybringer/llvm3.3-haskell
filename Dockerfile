@@ -1,8 +1,8 @@
-From ubuntu:trusty
+From haskell:8.2.2
 
 COPY sources.list  /etc/apt/
 
-RUN sudo apt-get update && sudo apt-get install  -y wget && sudo apt-get install  -y aptitude && aptitude search llvm && sudo apt-get install -y llvm-3.3 &&  sudo apt-get install -y libgmp-dev &&  sudo apt-get install -y g++ && mkdir /root/haskell && mkdir /root/LLVM
+RUN sudo apt-get update && sudo apt-get install  -y aptitude && aptitude search llvm && sudo apt-get install -y llvm-3.3 &&  sudo apt-get install -y libgmp-dev &&  sudo apt-get install -y g++ && mkdir /root/haskell && mkdir /root/LLVM
 
 
 
@@ -15,10 +15,6 @@ RUN apt-get update && \
     ln -sT /usr/bin/opt-3.3 /usr/local/bin/opt 
 
 
-
-RUN cd /root/haskell && wget https://downloads.haskell.org/~platform/8.2.2/haskell-platform-8.2.2-unknown-posix--core-x86_64.tar.gz && tar xvf haskell-platform-8.2.2-unknown-posix--core-x86_64.tar.gz && ./install-haskell-platform.sh 
-
-ENV  PATH          $PATH:/usr/local/bin
 
 
 COPY config /root/.cabal/
