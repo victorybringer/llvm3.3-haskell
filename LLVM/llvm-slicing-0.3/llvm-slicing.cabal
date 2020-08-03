@@ -68,7 +68,7 @@ library
                     
   
   -- Modules included in this library but not exported.
-  -- other-modules:       
+  -- other-modules:                                             
   
   -- LANGUAGE extensions used by modules in this package.
   other-extensions:    FlexibleInstances, TypeSynonymInstances, 
@@ -86,7 +86,7 @@ library
                   graphviz, filepath, directory,
                   llvm-data-interop, fgl, 
                   deepseq, deepseq-generics, 
-                  loch-th, lens, binary
+                  loch-th, lens, binary,llvm-tools
   
   -- Directories containing source files.
   -- hs-source-dirs:      
