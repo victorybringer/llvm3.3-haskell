@@ -15,9 +15,8 @@ RUN apt-get update && \
     ln -sT /usr/bin/opt-3.3 /usr/local/bin/opt 
 
 
-ADD haskell-platform-8.2.2-unknown-posix--full-x86_64.tar.gz  /root/haskell
 
-RUN cd /root/haskell && ./install-haskell-platform.sh 
+RUN cd /root/haskell && wget https://downloads.haskell.org/~platform/8.2.2/haskell-platform-8.2.2-unknown-posix--core-x86_64.tar.gz && tar xvf haskell-platform-8.2.2-unknown-posix--core-x86_64.tar.gz && ./install-haskell-platform.sh 
 
 ENV  PATH          $PATH:/usr/local/bin
 
